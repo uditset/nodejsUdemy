@@ -1,0 +1,24 @@
+{
+  "name": "leaning-node-js-with-udemy-course",
+  "version": "1.0.0",
+  "description": "This Project is for learning pupose of node js from Udemy course",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uditset/nodejsUdemy.git"
+  },
+  "author": "udit sethi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uditset/nodejsUdemy/issues"
+  },
+  "homepage": "https://github.com/uditset/nodejsUdemy#readme"
+}
