@@ -12,7 +12,7 @@ const handleIncomingRequests = (req,res) => {
         }
         else if(url===routesInfo?.users)
         {
-            const dummyUsers = ['User 1','User 2','User 3','User 4','User 5','User 6'];
+            const dummyUsers = ['User 1','User 2','User 3','User 4','User 5','User 6','User 7','User 8'];
             res.writeHead(200);
             res.write(`
                 <html>
