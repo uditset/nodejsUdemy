@@ -1,0 +1,122 @@
+.year-month-container{
+    display: flex;
+    width: 291px;
+    height: 250px;
+    padding: 20px;
+    gap: 34px;
+    border-radius: 8px;
+    border: 1px solid #6D7D934D;
+    box-sizing: border-box;
+  }
+  
+  .year-month-child{
+    display: flex;
+    flex-direction: column;
+    width: 251px;
+    height: 210px;
+    gap: 3px;
+    box-sizing: border-box;
+  }
+  
+  .year-month-child-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 26px;
+    font-family: Mulish;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: center;
+    color: #000000;
+  }
+  
+  .horzntal-line{
+    width: 251px;
+    border: 1px solid #6D7D9326;
+  }
+  
+  .months-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  #month-box{
+      display: flex;
+      align-items: center;
+      width: 75.67px;
+      height: 31px;
+      padding: 8px 10px;
+      gap: 8px;
+      border-radius: 4px;
+      background-color: #F7F7F7;
+      box-sizing: border-box;
+  }
+
+  <body>
+  <script src="script.js"></script>
+  <h1 class="title">Hello World! </h1>
+  <p id="currentTime"></p>
+  <div class="year-month-container">
+      <div class="year-month-child">
+          <div class="year-month-child-header">
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12.9275" cy="13.5993" r="12.9275" fill="white"/>
+                <circle cx="12.9275" cy="13.5993" r="12.4965" stroke="#6D7D93" stroke-opacity="0.15" stroke-width="0.861831"/>
+                <path d="M14.4833 9.2911L10.3438 13.4307L14.4833 17.5702" stroke="#F18121"/>
+              </svg>
+              <span id="uiux-selected-year">"'+currentSelectedYear+'"</span>
+              <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12.9275" cy="12.9275" r="12.9275" transform="matrix(-1 0 0 1 26 0.671875)" fill="white"/>
+                <circle cx="12.9275" cy="12.9275" r="12.4965" transform="matrix(-1 0 0 1 26 0.671875)" stroke="#6D7D93" stroke-opacity="0.15" stroke-width="0.861831"/>
+                <path d="M11.5167 9.2911L15.6562 13.4307L11.5167 17.5702" stroke="#F18121"/>
+              </svg>
+          </div>
+          
+          <hr class="horzntal-line">
+          
+          <div class="months-container">
+              <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>  <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+                <div id="month-box">
+                  January
+              </div>
+          </div>
+      </div>  
+  </div>
+</body>
+
+
+monthsArray
