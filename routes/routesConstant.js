@@ -3,4 +3,6 @@ module.exports = {
     home: '/',
     form: '/form',
     createUser: '/create-user',
+    addProduct: '/add-product',
+    createdSucc: '/created-successfully',
 }

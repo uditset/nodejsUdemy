@@ -4,6 +4,7 @@
   "description": "This is main branch. Do not merge any branch in this branch",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "chalk": "^5.3.0",
     "express": "^4.19.2"
   },
