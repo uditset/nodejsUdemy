@@ -1,0 +1,41 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.homepage-header{
+    height: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5%;
+    gap: 23px;
+    font-family: cursive;
+    font-size: 26px;
+    background-color: darkgray;
+    flex-wrap: wrap;
+}
+.homepage-header a:hover{
+    color: red;
+}
+.main-content{
+    height: 80vh;
+    background-color: darkcyan;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: brown;
+}
+.homepage-footer{
+    height: 10vh;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+.active{
+    color: black;
+}
