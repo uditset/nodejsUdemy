@@ -1,0 +1,11 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color: aliceblue;
+    width: 100%;
+    min-height: 35%;
+    display: flex;
+    justify-content: center;
+}

@@ -5,4 +5,5 @@ module.exports = {
     createUser: '/create-user',
     addProduct: '/add-product',
     createdSucc: '/created-successfully',
+    product: '/products'
 }

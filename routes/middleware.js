@@ -5,7 +5,7 @@ const middleWare1 = (req,resp,next) => {
 
 const middleWare2 = (req,resp,next) => {
     console.log("I am in middle ware 2");
-    resp.send('<h1>This is middle ware 2</h1>');
+    next();
 }
 
 module.exports = {
