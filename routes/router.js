@@ -23,7 +23,20 @@ router.post(routesConstant?.userDetails,(req,res)=>{
     const obj = req?.body;
     console.log(req?.body);
     formData.userDetails = {...formData?.userDetails,...obj}
-    res.status(200).send(formData);
+    res.render('displayUser',{...formData});
+})
+
+router.get(routesConstant?.dummyUserDetails,(req,res) => {
+    //res.status(200).sendFile(path.join(viewsPath,'homePage.html'));
+    res.render('userDetails');
+})
+
+router.get(routesConstant?.homePagePug,(req,res)=>{
+    res.render('homePagePug',{pageTitle: "HOME PAGE PUG", pageContent: "THIS DATA IS SENT FROM THE ROUTER BRO"});
+})
+
+router.get(routesConstant?.userPug,(req,res)=>{
+    res.render('userPagePug',{pageTitle: "U P Pug"});
 })
 
 router.get('*',(_,res)=>{

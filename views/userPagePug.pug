@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        link(rel="stylesheet", href="/styles/homePage.css")
+    body 
+        header.homepage-header
+            a(href="/") Home
+            a.active(href="/user") User
+            a(href="/userDetails") Dummy User Details Page
+
+        main.main-content
+            form(action="/user-details", method="post")       
+                input(type="text", name="userName", placeholder="User Name")
+                input(type="password", name="password", placeholder="Enter Your Password")
+                input(type="submit", value="Submit")
+        
+        footer.homepage-footer Footer of home page
