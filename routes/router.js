@@ -23,7 +23,7 @@ router.post(routesConstant?.userDetails,(req,res)=>{
     const obj = req?.body;
     console.log(req?.body);
     formData.userDetails = {...formData?.userDetails,...obj}
-    res.render('displayUser',{...formData});
+    res.render('displayUser',{...formData,pageTitle: 'user details hai'});
 })
 
 router.get(routesConstant?.dummyUserDetails,(req,res) => {
@@ -41,7 +41,8 @@ router.get(routesConstant?.userPug,(req,res)=>{
 
 router.get('*',(_,res)=>{
 
-    res.status(404).sendFile(path.join(viewsPath,'404.html'));
+    //res.status(404).sendFile(path.join(viewsPath,'404.html'));
+    res.status(404).render('404',{pageTitle: 'Page Not Found'});
 })
 
 module.exports = router;
