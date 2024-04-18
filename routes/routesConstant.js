@@ -1,5 +1,6 @@
 module.exports = {
     'homePage' : '/',
-    'user': '/user',
-    'userDetails': '/user-details',
+    'user': '/users',
+    'pageNotFound': '*',
+    'updateUserInfo': '/updateUserInfo',
 }

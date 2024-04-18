@@ -1,0 +1,7 @@
+extend layouts/layout1
+
+block content 
+    .dummy 
+    ul.all-user-details
+        each item in userDet 
+            li(id=item.id)=JSON.stringify(item)

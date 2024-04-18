@@ -1,34 +1,23 @@
-//importing node modules
 const express = require('express');
-const path = require('path');
-
-
-//importing our files & defining variables
 const routesConstant = require('./routesConstant');
-const router = express.Router();
-const viewsPath = path.join(__dirname,'..','views');
-const formData = require('../database/formData');
+const router = express?.Router();
+const formData = require('../database/formData.js');
 
-
-//Main routes info
-router.get(routesConstant?.homePage,(req,res) => {
-    res.status(200).sendFile(path.join(viewsPath,'homePage.html'));
+router?.get(routesConstant?.homePage,(req,res)=>{
+    res?.status(200)?.render('homePage',{pageTitle: "Home Page",path: routesConstant?.homePage});
 })
 
-router.get(routesConstant?.user,(req,res) => {
-    res.status(200).sendFile(path.join(viewsPath,'userPage.html'));
+router?.get(routesConstant?.user,(req,res)=>{
+    res?.status(200)?.render('user',{pageTitle: "User Page",path: routesConstant?.user,userDet: formData?.userDetails});
 })
 
-router.post(routesConstant?.userDetails,(req,res)=>{
-    const obj = req?.body;
-    console.log(req?.body);
-    formData.userDetails = {...formData?.userDetails,...obj}
-    res.status(200).send(formData);
+router?.post(routesConstant?.updateUserInfo,(req,res)=>{
+    formData?.userDetails?.push(req?.body)
+    res?.status(200)?.render('user',{pageTitle: "User Page",path: routesConstant?.user,userDet: formData?.userDetails})
 })
 
-router.get('*',(_,res)=>{
-
-    res.status(404).sendFile(path.join(viewsPath,'404.html'));
+router?.use(routesConstant?.pageNotFound,(req,res)=>{
+    res?.status(404)?.render('404',{pageTitle: "Page Not Found"});
 })
 
 module.exports = router;

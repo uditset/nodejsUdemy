@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: lightseagreen;
+}
+
+.navigation-bar{
+    height: 20vh;
+    background-color: burlywood;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 34px;
+    padding-right: 3.75rem;
+    a{
+        color: black;
+    }
+    a:hover{
+        color: gold;
+    }
+    .active{
+        color: darkorchid;
+    }
+}
+
+.main-content{
+    height: 60vh;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

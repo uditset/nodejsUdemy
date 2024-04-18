@@ -1,56 +1,28 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
-.homepage-header{
-    height: 10vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 5%;
-    gap: 23px;
-    font-family: cursive;
-    font-size: 26px;
-    background-color: darkgray;
-    flex-wrap: wrap;
-}
-.homepage-header a:hover{
-    color: red;
-}
-.main-content{
-    height: 80vh;
-    background-color: darkcyan;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 50px;
+.user-details{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: brown;
     flex-direction: column;
-}
-.homepage-footer{
-    height: 10vh;
-    background-color: black;
-    color: white;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center ;
-}
-.active{
-    color: black;
+    row-gap: 12%;
+    height: 100%;
+    background-color: aqua;
+    width: 25%;
 }
 
-input{
-    height: 38px;
-    border: 2px solid cornflowerblue;
-}
-
-form{
-    border: 1px solid orange;
+.col{
     display: flex;
     flex-direction: column;
-    margin-top: 23px;
-    gap: 9px;
-    width: 24%;
+    width: 45%;
+}
+.radio-button{
+    display: flex;
+    gap: 10px;
+}
+.submit-button{
+    background: orange;
+    border: 1px solid darkgoldenrod;
+    border-radius: 15px;
+}
+.submit-button:hover{
+    background: red;
 }

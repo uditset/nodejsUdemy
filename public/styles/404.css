@@ -1,14 +1,4 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
-body{
-    background-color: cyan;
-    font-size: 40px;
-    color: red;
-    border: 2px solid green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+.data{
+    font-size: 3rem;
+    color: black;
 }
