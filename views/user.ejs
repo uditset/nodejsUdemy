@@ -1,0 +1,18 @@
+<%-include("./reusableEjs/header.ejs")%>
+    <link rel="stylesheet" href="/styles/homePage.css">
+</head>
+<body>
+    <nav class="navigation-bar">
+        <a href="/" class= "<%= path=="/" ? "active" : "" %>">Home</a>
+        <a href="/users" class= "<%= path=="/users" ? "active" : "" %>">User</a>
+    </nav>
+    <section class="main-content">
+        <ul class="all-user-details">
+            <% userDet?.forEach(item => { %>
+                <li id="<%= item.id%>">
+                    <%= JSON.stringify(item) %>
+                </li>
+            <% }) %>
+        </ul>
+    </section>
+<%-include("./reusableEjs/footer.ejs")%>
