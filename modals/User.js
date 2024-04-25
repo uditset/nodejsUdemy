@@ -1,7 +1,8 @@
-const path = require("path");
-const formData = require("../database/formData")
-const fs = require('fs');
-const userFilePath = path.join(__dirname,'..','database','userData.json');
+// const path = require("path");
+// const formData = require("../database/formData")
+// const fs = require('fs');
+// const userFilePath = path.join(__dirname,'..','database','userData.json');
+const databaseConnection = require('../database/databaseConnection.js');
 
 module.exports = class User {
     constructor()
@@ -9,43 +10,20 @@ module.exports = class User {
         console.log("Creating new user");
     }
 
-    save(curUser,cb)
+    save(curUser)
     {
         this.name = curUser?.name;
         this.email = curUser?.email;
         this.gender = curUser?.gender;
-        fs.readFile(userFilePath,(err,fileContent) => {
-            let preData = [];
-            if(!err)
-            {
-                preData = JSON.parse(fileContent);
-            }
-            preData.push(this);
-            fs.writeFile(userFilePath,JSON.stringify(preData),err=>
-            {
-                if(err)
-                {
-                    console.log("there is error in saving the data to file",err)
-                }
-                else
-                {
-                    cb();
-                }
-            }
-            );
-        })
-        // formData?.userDetails?.push(this);
+        return databaseConnection?.execute('INSERT INTO user_details (name,email,gender,password_hash) VALUES (?,?,?,?)',[this.name,this.email,this.gender,"DEF"])?.then(res => {
+            console.log("I am here");
+           return databaseConnection?.execute('SELECT * FROM user_Details');
+        });
     }
 
-    static fetchAll(cb)
+    static fetchAll()
     {
         console.log("I am here in fetch")
-        fs.readFile(userFilePath,(err,fileContent) => {
-            if(err)
-            {
-                cb([]);
-            }
-            cb(JSON.parse(fileContent));
-        })
+        return databaseConnection?.execute('SELECT * FROM user_details');
     }
 }
