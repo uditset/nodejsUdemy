@@ -1,29 +1,30 @@
-// const path = require("path");
-// const formData = require("../database/formData")
-// const fs = require('fs');
-// const userFilePath = path.join(__dirname,'..','database','userData.json');
-const databaseConnection = require('../database/databaseConnection.js');
+const Sequelize = require('sequelize');
 
-module.exports = class User {
-    constructor()
-    {
-        console.log("Creating new user");
-    }
+const sequelize = require('../database/databaseConnection.js');
 
-    save(curUser)
-    {
-        this.name = curUser?.name;
-        this.email = curUser?.email;
-        this.gender = curUser?.gender;
-        return databaseConnection?.execute('INSERT INTO user_details (name,email,gender,password_hash) VALUES (?,?,?,?)',[this.name,this.email,this.gender,"DEF"])?.then(res => {
-            console.log("I am here");
-           return databaseConnection?.execute('SELECT * FROM user_Details');
-        });
+const User = sequelize.define('user',{
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true
+    },
+    name: {
+        type: Sequelize?.STRING,
+        allowNull: false,
+    },
+    email: {
+        type: Sequelize?.STRING,
+        allowNull: false,
+    },
+    gender: {
+        type: Sequelize?.CHAR,
+        allowNull: false,
+    },
+    password_hash: {
+        type: Sequelize?.STRING,
+        allowNull: false,
     }
+});
 
-    static fetchAll()
-    {
-        console.log("I am here in fetch")
-        return databaseConnection?.execute('SELECT * FROM user_details');
-    }
-}
+module.exports = User;

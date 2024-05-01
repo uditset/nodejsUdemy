@@ -9,6 +9,8 @@ router?.get(routesConstant?.homePage,homeController?.homePage);
 
 router?.get(routesConstant?.user,userController?.userPage);
 
+router?.get(routesConstant?.userById,userController?.userByIdPage);
+
 router?.post(routesConstant?.updateUserInfo,userController?.updateUser);
 
 router?.use(routesConstant?.pageNotFound,pageNotFoundController?.pageNotFound);

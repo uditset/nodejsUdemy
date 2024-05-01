@@ -6,6 +6,7 @@
     <nav class="navigation-bar">
         <a href="/" class= "<%= path=="/" ? "active" : "" %>">Home</a>
         <a href="/users" class= "<%= path=="/users" ? "active" : "" %>">User</a>
+        <a href="/usersById?id=1" class="<%= path=="/usersById" ? "active" : "" %>">User By Id</a>
     </nav>
     <section class="main-content">
         <form class="user-details" action="/updateUserInfo" method="post" onsubmit="handleSubmitClick(event)">

@@ -3,4 +3,5 @@ module.exports = {
     'user': '/users',
     'pageNotFound': '*',
     'updateUserInfo': '/updateUserInfo',
+    'userById': '/usersById'
 }
